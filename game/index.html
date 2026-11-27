@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fjord Run — 3D Flight Game</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./src/style.css">
+<script type="importmap">
+{ "imports": { "three": "./vendor/three.min.js" } }
+</script>
+</head>
+<body>
+<canvas id="game" aria-label="Fjord Run: a 3D flight game over fjords, canyons and islands. Fly the rings, mind your fuel, land on runway 36."></canvas>
+<p id="status" role="status" aria-live="polite"></p>
+
+<div id="hud">
+  <div id="topBar">
+    <div class="panel" id="missionPanel">
+      <div id="missionName">FJORD RING RUN</div>
+      <div class="row"><span>SCORE <b id="score">0000</b></span><span id="rings">0 / 8 RINGS</span></div>
+      <div class="row dim" id="timer">TIME 00:00</div>
+      <div class="row dim" id="nextTarget">NEXT RING 1</div>
+    </div>
+    <canvas id="compass" width="360" height="48" aria-label="Heading compass"></canvas>
+    <div class="panel" id="flightPanel">
+      <div class="big"><span><label>ALT</label><b id="alt">000</b><small>FT AGL</small></span><span><label>SPD</label><b id="spd">0</b><small>KT</small></span><span><label>HDG</label><b id="hdg">000</b><small>°</small></span></div>
+      <div class="row dim"><span id="altMsl">0 FT MSL</span><span id="vsi">+0 FPM</span><span id="rwy">RWY 36</span></div>
+    </div>
+  </div>
+  <div id="warn"></div>
+  <div id="toast"></div>
+  <div id="reticle"><span></span></div>
+  <div id="bottomBar">
+    <div class="panel" id="systemsPanel">
+      <div class="barRow"><label>THR</label><div class="bar"><div id="throttleBar"></div></div><span id="throttleText">THR 65%</span></div>
+      <div class="barRow"><label>FUEL</label><div class="bar"><div id="fuelBar"></div></div><span id="fuelText">100% FUEL</span></div>
+      <div class="barRow"><label>DMG</label><div class="bar"><div id="dmgBar"></div></div><span id="dmgText">0% DAMAGE</span></div>
+    </div>
+    <div class="panel" id="instruments">
+      <canvas id="horizon" width="120" height="120" aria-label="Artificial horizon"></canvas>
+      <div class="instText"><b>ATTITUDE</b><span>GEAR DOWN</span><span>FLAPS UP</span><span id="gearNote">RWY 36 • 620 M</span></div>
+    </div>
+  </div>
+</div>
+
+<div id="overlay">
+  <div id="overlayCard">
+    <h1 id="overlayTitle">FJORD RUN</h1>
+    <p id="overlayBody"></p>
+    <div id="missionButtons">
+      <button data-mission="0">1 · FJORD RING RUN<br><small>8 rings down the fjord</small></button>
+      <button data-mission="1">2 · CANYON DASH<br><small>6 low rings · beat 150 s</small></button>
+      <button data-mission="2">3 · ISLAND TOUR<br><small>5 beacons, then land</small></button>
+    </div>
+    <p id="overlayHint"></p>
+  </div>
+</div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
