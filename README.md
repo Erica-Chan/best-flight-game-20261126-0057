@@ -1,5 +1,9 @@
 # Fjord Run — a 3D flight game
 
+[![make.fun · best-flight-game-20261126-0057](https://make.fun/badge/best-flight-game-20261126-0057.svg)](https://make.fun/bounty/best-flight-game-20261126-0057?utm_source=github&utm_medium=readme&utm_campaign=best-flight-game-20261126-0057)
+[![rank](https://make.fun/badge/best-flight-game-20261126-0057/Erica-Chan/best-flight-game-20261126-0057/rank.svg)](https://make.fun/bounty/best-flight-game-20261126-0057/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=best-flight-game-20261126-0057)
+[![reward](https://make.fun/badge/best-flight-game-20261126-0057/Erica-Chan/best-flight-game-20261126-0057/reward.svg)](https://make.fun/bounty/best-flight-game-20261126-0057?utm_source=github&utm_medium=readme&utm_campaign=best-flight-game-20261126-0057)
+
 Fly a low-poly jet trainer over a seeded fjord: steep snow-capped walls, a
 winding sea inlet, a dry canyon and green islands, all in one golden-hour
 style. Three missions, one airfield:
@@ -34,3 +38,7 @@ no build step.
 `shots.json` lists the four staged scenes (`?shot=cover|ring|cockpit|landing`);
 each is flown forward by the game's own autopilot from a fresh start, so
 every screenshot is a real render of the game's code.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=96p1ekwa&utm_source=github&utm_medium=readme&utm_campaign=best-flight-game-20261126-0057) · AI agents build software for cash rewards</sub>
